@@ -27,13 +27,13 @@ const Navbar = () => {
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
-            <NavLink to='/' className={({ isActive }) => isActive ? "border-b-2 border-primary pb-1 font-bold" : "pb-1"
-            }><li><a className='text-lg'>Home</a></li></NavLink>
-            <NavLink to='/my-bills' className={({ isActive }) => isActive ? "border-b-2 border-primary pb-1 font-bold" : "pb-1"
-            }><li>
-                <a className='text-lg'>Bills</a>
+            <NavLink to='/' className={({ isActive }) => isActive ? "mr-4 border-b-2 border-primary pb-1 font-bold" : "pb-1 mr-4"
+            }><li className='text-lg '>Home</li></NavLink>
+            <NavLink to='/my-bills' className={({ isActive }) => isActive ? "mr-4 border-b-2 border-primary pb-1 font-bold" : "pb-1 mr-4"
+            }><li className='text-lg '>
+                Bills
               </li></NavLink>
-            <li><a className='text-lg'>My Profile</a></li>
+            <li className='text-lg'>My Profile</li>
           </ul>
         </div>
         <div className="navbar-end">
@@ -53,14 +53,11 @@ const Navbar = () => {
             <ul
               tabIndex={0}
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-              <li>
-                <a className="justify-between">
-                  Profile
-                  <span className="badge">New</span>
-                </a>
+              <li className='ml-2 mb-1 font-medium'>
+                Profile
               </li>
-              <li><a>Settings</a></li>
-              <li><a>Logout</a></li>
+              <li className='ml-2 font-medium mb-1'>10000</li>
+              <li className='ml-2 font-medium'>Logout</li>
             </ul>
           </div>
         </div>

@@ -5,7 +5,8 @@
     "icon": "Bolt",
     "organization": "DESCO",
     "amount": 1890,
-    "due-date": "2025-03-22T06:57:58.110Z"
+    "due_date": "03 March, 2025",
+    "logo": "https://d1yjjnpx0p53s8.cloudfront.net/styles/logo-thumbnail/s3/012015/desco_0.png?itok=QUrDHyHQ"
   },
   {
     "id": 2,
@@ -13,7 +14,9 @@
     "icon": "Flame",
     "organization": "Titas Gas",
     "amount": 1488,
-    "due-date": "2025-03-28T06:57:58.110Z"
+    "due_date": "07 March, 2025",
+    "logo":"https://seeklogo.com/images/T/titash-gas-logo-E0EB22B13B-seeklogo.com.png"
+
   },
   {
     "id": 3,
@@ -21,15 +24,17 @@
     "icon": "Droplet",
     "organization": "WASA",
     "amount": 970,
-    "due-date": "2025-03-25T06:57:58.110Z"
+    "due_date": "10 April, 2025",
+    "logo":"https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/4a/87/a5/4a87a519-734f-413b-9c7a-0bf41e22edf9/AppIcon-1x_U007emarketing-0-10-0-85-220.png/512x512bb.jpg"
   },
   {
     "id": 4,
     "bill_type": "internet",
     "icon": "Wifi",
-    "organization": "Link3",
+    "organization": "Dot-Internet",
     "amount": 1200,
-    "due-date": "2025-03-20T06:57:58.110Z"
+    "due_date": "15 April, 2025",
+    "logo":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuQJZP6TEYJQxeATFB6nF0K8Kf1dZqrVdHfw&s"
   },
   {
     "id": 5,
@@ -37,7 +42,8 @@
     "icon": "CreditCard",
     "organization": "DBBL",
     "amount": 4500,
-    "due-date": "2025-03-29T06:57:58.110Z"
+    "due_date": "03 june, 2025",
+    "logo":"https://zarss-bibm.s3-ap-southeast-1.amazonaws.com/bibm_org/members_photo/U8Q06e47ryjD2Pehh6dkTcCdloyqwyklpEQxbtd9.jpeg"
   },
   
   {
@@ -46,6 +52,7 @@
     "icon": "Smartphone",
     "organization": "Grameenphone",
     "amount": 890,
-    "due-date": "2025-03-21T06:57:58.110Z"
+    "due_date": "05 June, 2025",
+    "logo":"https://tfe-bd.sgp1.cdn.digitaloceanspaces.com/uploads/1588934193.jpg"
   }
 ]

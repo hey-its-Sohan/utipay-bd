@@ -39,7 +39,8 @@ export const router = createBrowserRouter([
 
       },
       {
-        path: '/bill-details',
+        path: '/bill-details/:id',
+        loader: () => fetch('../utilityData.json'),
         Component: BillDetails,
       }
     ]

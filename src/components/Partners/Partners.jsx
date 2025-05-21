@@ -8,9 +8,9 @@ import dot from '../../assets/dot-internet.jpg'
 
 const Partners = () => {
   return (
-    <div className='mb-10 max-w-screen-xl mx-auto '>
+    <div className=' max-w-screen-xl mx-auto '>
       <h1 className='text-center my-10 text-4xl font-bold text-primary'>Sponsers</h1>
-      <div className='grid grid-cols-3 md:grid-cols-6 gap-3 bg-white p-7 md:p-3 rounded-xl mb-10 '>
+      <div className='grid grid-cols-3 md:grid-cols-6 gap-3 bg-white p-7 md:p-3 rounded-xl '>
         <div><img className='h-40' src={des} alt="" /></div>
         <div><img className='h-40' src={nes} alt="" /></div>
         <div><img className='h-40' src={gp} alt="" /></div>
