@@ -2,7 +2,7 @@
   {
     "id": 1,
     "bill_type": "electricity",
-    "icon": "https://cdn-icons-png.flaticon.com/512/1046/1046784.png",
+    "icon": "Bolt",
     "organization": "DESCO",
     "amount": 1890,
     "due-date": "2025-03-22T06:57:58.110Z"
@@ -10,7 +10,7 @@
   {
     "id": 2,
     "bill_type": "gas",
-    "icon": "https://cdn-icons-png.flaticon.com/512/2991/2991148.png",
+    "icon": "Flame",
     "organization": "Titas Gas",
     "amount": 1488,
     "due-date": "2025-03-28T06:57:58.110Z"
@@ -18,7 +18,7 @@
   {
     "id": 3,
     "bill_type": "water",
-    "icon": "https://cdn-icons-png.flaticon.com/512/3314/3314499.png",
+    "icon": "Droplet",
     "organization": "WASA",
     "amount": 970,
     "due-date": "2025-03-25T06:57:58.110Z"
@@ -26,7 +26,7 @@
   {
     "id": 4,
     "bill_type": "internet",
-    "icon": "https://cdn-icons-png.flaticon.com/512/484/484662.png",
+    "icon": "Wifi",
     "organization": "Link3",
     "amount": 1200,
     "due-date": "2025-03-20T06:57:58.110Z"
@@ -34,23 +34,16 @@
   {
     "id": 5,
     "bill_type": "credit_card",
-    "icon": "https://cdn-icons-png.flaticon.com/512/633/633611.png",
+    "icon": "CreditCard",
     "organization": "DBBL",
     "amount": 4500,
     "due-date": "2025-03-29T06:57:58.110Z"
   },
-  {
-    "id": 6,
-    "bill_type": "tuition",
-    "icon": "https://cdn-icons-png.flaticon.com/512/2344/2344000.png",
-    "organization": "Maple Leaf Int. School",
-    "amount": 3500,
-    "due-date": "2025-04-05T06:57:58.110Z"
-  },
+  
   {
     "id": 7,
     "bill_type": "mobile_postpaid",
-    "icon": "https://cdn-icons-png.flaticon.com/512/1828/1828843.png",
+    "icon": "Smartphone",
     "organization": "Grameenphone",
     "amount": 890,
     "due-date": "2025-03-21T06:57:58.110Z"

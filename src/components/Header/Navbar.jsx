@@ -29,9 +29,10 @@ const Navbar = () => {
           <ul className="menu menu-horizontal px-1">
             <NavLink to='/' className={({ isActive }) => isActive ? "border-b-2 border-primary pb-1 font-bold" : "pb-1"
             }><li><a className='text-lg'>Home</a></li></NavLink>
-            <li>
-              <a className='text-lg'>Bills</a>
-            </li>
+            <NavLink to='/my-bills' className={({ isActive }) => isActive ? "border-b-2 border-primary pb-1 font-bold" : "pb-1"
+            }><li>
+                <a className='text-lg'>Bills</a>
+              </li></NavLink>
             <li><a className='text-lg'>My Profile</a></li>
           </ul>
         </div>
