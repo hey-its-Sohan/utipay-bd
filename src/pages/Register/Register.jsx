@@ -16,7 +16,7 @@ const Register = () => {
             <input type="password" className="input" placeholder="Password" />
             <div><a className="link link-hover text-lg">Forgot password?</a></div>
             <button className="btn btn-neutral my-2">Login</button>
-            <p className='text-lg'>Don't have an account? <Link className='text-[#D6005D] text-lg underline'>Register Now</Link></p>
+            <p className='text-lg'>Already have an account? <Link to='/login' className='text-[#D6005D] text-lg underline'>Login</Link></p>
           </form>
         </div>
       </div>

@@ -1,10 +1,25 @@
 import React from 'react';
-import { Link, useLoaderData, useParams } from 'react-router';
-
+import { Link, useLoaderData, useNavigate, useParams } from 'react-router';
+import { toast } from 'react-toastify';
 const BillDetails = () => {
   const { id } = useParams()
   const data = useLoaderData()
+  const navigate = useNavigate();
   const singleDetail = data.find(detail => detail.id == id)
+
+  const handlePay = () => {
+    if (isPaid) {
+      toast.error('This bill has already been paid.');
+      return;
+    }
+    const updatedPaid = [...paidBills, id];
+    localStorage.setItem('paidBills', JSON.stringify(updatedPaid));
+    toast.success('Bill Paid Successfully');
+    navigate('/my-bills');
+  };
+
+  const paidBills = JSON.parse(localStorage.getItem('paidBills')) || [];
+  const isPaid = paidBills.includes(id);
 
   if (!singleDetail) {
     return (
@@ -25,7 +40,7 @@ const BillDetails = () => {
     <div className='bg-base-200'>
       <div className='max-w-screen-xl mx-auto py-16'>
         <div className="card lg:card-side bg-white p-4 shadow-sm mb-4 ">
-          <figure className='w-[200px]'>
+          <figure className='w-[230px]'>
             <img
               src={singleDetail.logo}
               alt="Album" />
@@ -47,7 +62,11 @@ const BillDetails = () => {
 
 
             <div className="card-actions mt-2 ">
-              <Link to='/my-bills'><button className="btn btn-primary text-white text-lg">Pay Now</button></Link>
+              <Link to='/my-bills'><button
+                onClick={handlePay}
+                disabled={isPaid}
+                className={`btn text-white text-lg ${isPaid ? 'bg-gray-400 cursor-not-allowed' : 'btn-primary'}`}
+              >{isPaid ? 'Already Paid' : 'Pay Now'}</button></Link>
             </div>
           </div>
         </div>

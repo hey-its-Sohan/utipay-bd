@@ -38,7 +38,7 @@
   },
   {
     "id": 5,
-    "bill_type": "credit_card",
+    "bill_type": "Credit Card",
     "icon": "CreditCard",
     "organization": "DBBL",
     "amount": 4500,
@@ -48,7 +48,7 @@
   
   {
     "id": 7,
-    "bill_type": "mobile_postpaid",
+    "bill_type": "Mobile Postpaid",
     "icon": "Smartphone",
     "organization": "Grameenphone",
     "amount": 890,
