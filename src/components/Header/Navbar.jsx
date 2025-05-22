@@ -51,7 +51,7 @@ const Navbar = () => {
             }><li className='text-lg '>
                 Bills
               </li></NavLink>
-            <NavLink>
+            <NavLink to='/my-profile'>
               <li className='text-lg'>My Profile</li>
             </NavLink>
           </ul>
