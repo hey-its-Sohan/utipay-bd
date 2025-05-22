@@ -1,8 +1,22 @@
-import React from 'react';
+import React, { use } from 'react';
 import logo from "../../assets/UtiPay-logo-removebg.png"
 import { Link, NavLink } from 'react-router';
+import { AuthContext } from '../../contexts/AuthContext';
 
 const Navbar = () => {
+
+  const { user, signOutUser } = use(AuthContext)
+
+  const handleSignOut = () => {
+    signOutUser()
+      .then(() => {
+
+      })
+      .catch(error => {
+
+      })
+  }
+
   return (
     <div className='max-w-screen-xl mx-auto'>
       <div className="navbar bg-base-100 ">
@@ -14,11 +28,15 @@ const Navbar = () => {
             <ul
               tabIndex={0}
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-              <li><a>Item 1</a></li>
-              <li>
-                <a>Item 1</a>
-              </li>
-              <li><a>Item 3</a></li>
+              <NavLink to='/' className={({ isActive }) => isActive ? "mr-4 border-b-2 border-primary pb-1 font-bold" : "pb-1 mr-4"
+              }><li className='mb-2 px-2 '>Home</li></NavLink>
+              <NavLink to='/my-bills' className={({ isActive }) => isActive ? "mr-4 border-b-2 border-primary pb-1 font-bold" : "pb-1 mr-4"
+              }><li className='mb-2 px-2 '>
+                  Bills
+                </li></NavLink>
+              <NavLink>
+                <li className='mb-2 px-2'>My Profile</li>
+              </NavLink>
             </ul>
           </div>
           <div>
@@ -33,14 +51,16 @@ const Navbar = () => {
             }><li className='text-lg '>
                 Bills
               </li></NavLink>
-            <li className='text-lg'>My Profile</li>
+            <NavLink>
+              <li className='text-lg'>My Profile</li>
+            </NavLink>
           </ul>
         </div>
         <div className="navbar-end">
-          <div>
-            <Link to='/login'><button className='btn btn-outline btn-primary mr-3 '>Login</button></Link>
-            <button className='btn btn-outline btn-primary mr-3 '>Register</button>
-          </div>
+          {user ? <div className='mr-3 text-lg font-medium'>{user.email}</div> : <div className='flex'>
+            <Link to='/login'><button className='btn btn-outline btn-primary mr-2 md:mr-3 px-2 md:px-5 '>Login</button></Link>
+            <Link to='/register'><button className='btn btn-outline btn-primary mr-3 px-2 md:px-5'>Register</button></Link>
+          </div>}
 
           <div className="dropdown dropdown-end">
             <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
@@ -53,11 +73,11 @@ const Navbar = () => {
             <ul
               tabIndex={0}
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-              <li className='ml-2 mb-1 font-medium'>
+              <li className='ml-2 mb-2 font-medium'>
                 Profile
               </li>
-              <li className='ml-2 font-medium mb-1'>10000</li>
-              <li className='ml-2 font-medium'>Logout</li>
+              <li className='ml-2 font-medium mb-2'>10000</li>
+              <li onClick={handleSignOut} className='ml-2 font-medium mb-2'>Logout</li>
             </ul>
           </div>
         </div>
