@@ -2,10 +2,11 @@ import React, { use } from 'react';
 import logo from "../../assets/UtiPay-logo-removebg.png"
 import { Link, NavLink } from 'react-router';
 import { AuthContext } from '../../contexts/AuthContext';
+import userPhoto from '../../assets/user-photo.png';
 
 const Navbar = () => {
 
-  const { user, signOutUser } = use(AuthContext)
+  const { user, signOutUser, balance } = use(AuthContext)
 
   const handleSignOut = () => {
     signOutUser()
@@ -34,7 +35,8 @@ const Navbar = () => {
               }><li className='mb-2 px-2 '>
                   Bills
                 </li></NavLink>
-              <NavLink>
+              <NavLink to='/my-profile' className={({ isActive }) => isActive ? "mr-4 border-b-2 border-primary pb-1 font-bold" : "pb-1 mr-4"
+              }>
                 <li className='mb-2 px-2'>My Profile</li>
               </NavLink>
             </ul>
@@ -51,8 +53,8 @@ const Navbar = () => {
             }><li className='text-lg '>
                 Bills
               </li></NavLink>
-            <NavLink to='/my-profile'>
-              <li className='text-lg'>My Profile</li>
+            <NavLink to='/my-profile' className={({ isActive }) => isActive ? "mr-4 border-b-2 border-primary pb-1 font-bold" : "pb-1 mr-4"
+            }><li className='text-lg'>My Profile</li>
             </NavLink>
           </ul>
         </div>
@@ -67,17 +69,15 @@ const Navbar = () => {
               <div className="w-10 rounded-full">
                 <img
                   alt="Tailwind CSS Navbar component"
-                  src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                  src={user?.photoURL || userPhoto} />
               </div>
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-              <li className='ml-2 mb-2 font-medium'>
-                Profile
-              </li>
-              <li className='ml-2 font-medium mb-2'>10000</li>
-              <li onClick={handleSignOut} className='ml-2 font-medium mb-2'>Logout</li>
+              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52  shadow">
+
+              <li className='ml-2 font-medium mb-1 px-2'>Balance: {balance} BDT</li>
+              <Link to='/'><li onClick={handleSignOut} className='ml-2 p-2 font-medium mb-2 cursor-pointer hover:bg-base-300'>Log Out</li></Link>
             </ul>
           </div>
         </div>

@@ -26,16 +26,17 @@ const Cards = ({ data }) => {
             data.map(card => {
               const Icon = iconMap[card.icon];
               return (
-                <div key={card.id} className='py-5 border border-primary rounded-xl shadow hover:shadow-md transition'>
-                  <div className=' flex flex-col gap3 items-center mb-3'>
-                    <Icon className="w-10 h-10 text-primary" />
-                    <div>
-                      <h3 className='text-lg font-semibold capitalize'>{card.bill_type}</h3>
+                <Link to='/my-bills'>
+                  <div key={card.id} className='py-5 border border-primary rounded-xl shadow hover:shadow-md transition'>
+                    <div className=' flex flex-col gap3 items-center mb-3'>
+                      <Icon className="w-10 h-10 text-primary" />
+                      <div>
+                        <h3 className='text-lg font-semibold capitalize'>{card.bill_type}</h3>
+                      </div>
+
                     </div>
 
-                  </div>
-
-                </div>
+                  </div></Link>
               );
             })
           }

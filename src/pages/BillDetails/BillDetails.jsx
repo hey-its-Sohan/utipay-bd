@@ -1,37 +1,40 @@
-import React from 'react';
+import React, { use } from 'react';
 import { Link, useLoaderData, useNavigate, useParams } from 'react-router';
 import { toast } from 'react-toastify';
+import { AuthContext } from '../../contexts/AuthContext';
 const BillDetails = () => {
   const { id } = useParams()
   const data = useLoaderData()
   const navigate = useNavigate();
   const singleDetail = data.find(detail => detail.id == id)
+  const { deductBalance } = use(AuthContext);
 
   const handlePay = () => {
     if (isPaid) {
+
       toast.error('This bill has already been paid.');
+      console.log('paid');
+      navigate('/my-bills');
       return;
     }
     const updatedPaid = [...paidBills, id];
     localStorage.setItem('paidBills', JSON.stringify(updatedPaid));
+    deductBalance(singleDetail.amount);
     toast.success('Bill Paid Successfully');
     navigate('/my-bills');
   };
 
   const paidBills = JSON.parse(localStorage.getItem('paidBills')) || [];
-  const isPaid = paidBills.includes(id);
+  const isPaid = paidBills.includes(id.toString());
 
   if (!singleDetail) {
     return (
       <div className='my-32'>
         <h1 className='text-4xl font-extrabold text-center my-7'>No Bill Data Found !!!</h1>
-        <h4 className='text-xl text-gray-500 text-center mb-7'>No Lawyer Found with this License No- </h4>
-        <div className='flex items-center gap-2 mb-7 justify-center'>
+        <h4 className='text-xl text-gray-500 text-center mb-7'>No Bill details Found. Please check the correct path. </h4>
 
-          <h4 className='text-2xl text-gray-700 text-center font-extrabold'></h4>
-        </div>
         <div className='text-center'>
-          <Link to='/'><button className=" bg-[#0EA106] text-white cursor-pointer px-5 py-1 rounded-lg  text-xl font-extrabold">View All Lawyers</button></Link>
+          <Link to='/'><button className=" btn btn-primary text-white cursor-pointer px-5 py-1 rounded-lg  text-xl font-extrabold">Go Back to Home</button></Link>
         </div>
       </div >
     )
@@ -40,7 +43,7 @@ const BillDetails = () => {
     <div className='bg-base-200'>
       <div className='max-w-screen-xl mx-auto py-16'>
         <div className="card lg:card-side bg-white p-4 shadow-sm mb-4 ">
-          <figure className='w-[230px]'>
+          <figure className='w-[270px]'>
             <img
               src={singleDetail.logo}
               alt="Album" />
@@ -62,11 +65,11 @@ const BillDetails = () => {
 
 
             <div className="card-actions mt-2 ">
-              <Link to='/my-bills'><button
+              <button
                 onClick={handlePay}
-                disabled={isPaid}
+
                 className={`btn text-white text-lg ${isPaid ? 'bg-gray-400 cursor-not-allowed' : 'btn-primary'}`}
-              >{isPaid ? 'Already Paid' : 'Pay Now'}</button></Link>
+              >{isPaid ? 'Already Paid' : 'Pay Now'}</button>
             </div>
           </div>
         </div>

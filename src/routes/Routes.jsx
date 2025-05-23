@@ -14,6 +14,8 @@ import PrivateRouts from '../components/PrivateRouts/PrivateRouts';
 import UserProfile from '../pages/UserProfile/UserProfile';
 import UpdateProfile from '../pages/UpdateProfile/UpdateProfile';
 
+
+
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -47,14 +49,17 @@ export const router = createBrowserRouter([
         Component: BillDetails,
       },
       {
+        path: '/update-profile',
+
+        Component: UpdateProfile,
+      },
+
+      {
         path: '/my-profile',
 
-        Component: UserProfile,
+        element: <PrivateRouts><UserProfile></UserProfile></PrivateRouts>,
       },
-      {
-        path: '/update-profile',
-        Component: UpdateProfile,
-      }
+
     ]
   },
 ]);
