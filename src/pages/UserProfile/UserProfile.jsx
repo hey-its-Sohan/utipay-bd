@@ -7,7 +7,7 @@ import { Link } from 'react-router';
 const UserProfile = () => {
   const { user } = use(AuthContext)
   return (
-    <div className='max-w-screen-xl mx-auto'>
+    <div className='max-w-screen-xl mx-auto md:my-44 lg:my-20'>
       <div className='relative w-80 mx-auto'>
         <img className='w-full rounded-lg' src={user?.photoURL || userPhoto} alt="User" />
         <Link to='/update-profile'><SquareArrowOutUpRight

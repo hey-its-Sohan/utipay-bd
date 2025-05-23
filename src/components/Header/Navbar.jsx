@@ -23,7 +23,7 @@ const Navbar = () => {
       <div className="navbar bg-base-100 ">
         <div className="navbar-start">
           <div className="dropdown">
-            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+            <div tabIndex={0} role="button" className="btn btn-ghost md:hidden">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
             </div>
             <ul
@@ -45,7 +45,7 @@ const Navbar = () => {
             <img className='w-40' src={logo} alt="" />
           </div>
         </div>
-        <div className="navbar-center hidden lg:flex">
+        <div className="navbar-center hidden md:flex">
           <ul className="menu menu-horizontal px-1">
             <NavLink to='/' className={({ isActive }) => isActive ? "mr-4 border-b-2 border-primary pb-1 font-bold" : "pb-1 mr-4"
             }><li className='text-lg '>Home</li></NavLink>
@@ -58,7 +58,7 @@ const Navbar = () => {
             </NavLink>
           </ul>
         </div>
-        <div className="navbar-end">
+        <div className="navbar-end ">
           {user ? <div className='mr-3 text-lg font-medium'>{user.email}</div> : <div className='flex'>
             <Link to='/login'><button className='btn btn-outline btn-primary mr-2 md:mr-3 px-2 md:px-5 '>Login</button></Link>
             <Link to='/register'><button className='btn btn-outline btn-primary mr-3 px-2 md:px-5'>Register</button></Link>

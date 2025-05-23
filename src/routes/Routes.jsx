@@ -25,38 +25,43 @@ export const router = createBrowserRouter([
     children: [
       {
         path: '/',
+        hydrateFallbackElement: <div className='max-w-screen-xl mx-auto text-center my-[430px]'><span className="loading loading-ring loading-xl text-primary"></span></div>,
         loader: () => fetch('../utilityData.json'),
         Component: Home
       },
       {
         path: '/login',
+        hydrateFallbackElement: <div className='max-w-screen-xl mx-auto text-center my-[430px]'><span className="loading loading-ring loading-xl text-primary"></span></div>,
         Component: Login,
       },
 
       {
         path: '/register',
+        hydrateFallbackElement: <div className='max-w-screen-xl mx-auto text-center my-[430px]'><span className="loading loading-ring loading-xl text-primary"></span></div>,
         Component: Register,
       },
       {
         path: '/my-bills',
+        hydrateFallbackElement: <div className='max-w-screen-xl mx-auto text-center my-[430px]'><span className="loading loading-ring loading-xl text-primary"></span></div>,
         loader: () => fetch('../utilityData.json'),
         element: <PrivateRouts><MyBills></MyBills></PrivateRouts>
 
       },
       {
         path: '/bill-details/:id',
+        hydrateFallbackElement: <div className='max-w-screen-xl mx-auto text-center my-[430px]'><span className="loading loading-ring loading-xl text-primary"></span></div>,
         loader: () => fetch('../utilityData.json'),
         Component: BillDetails,
       },
       {
         path: '/update-profile',
-
+        hydrateFallbackElement: <div className='max-w-screen-xl mx-auto text-center my-[430px]'><span className="loading loading-ring loading-xl text-primary"></span></div>,
         Component: UpdateProfile,
       },
 
       {
         path: '/my-profile',
-
+        hydrateFallbackElement: <div className='max-w-screen-xl mx-auto text-center my-[430px]'><span className="loading loading-ring loading-xl text-primary"></span></div>,
         element: <PrivateRouts><UserProfile></UserProfile></PrivateRouts>,
       },
 

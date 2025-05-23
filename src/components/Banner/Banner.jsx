@@ -24,31 +24,32 @@ import { Facebook, Linkedin, Twitter } from 'lucide-react';
 const Banner = () => {
   return (
     < >
-      <div className='max-w-screen-xl mx-auto'>
-        <div>
-          <div
-            className="hero h-[500px] mb-10"
-            style={{
-              backgroundImage:
-                `url(${bannerCover})`,
-            }}
-          >
-            <div className="hero-overlay"></div>
-            <div className="hero-content text-neutral-content text-center">
-              <div className="max-w-md">
-                <h1 className="mb-5 text-4xl text-white font-bold">Welcome to UtiPay BD</h1>
-                <p className="mb-5 text-white">
-                  A trusted platform for managing and paying your essential utility bills with ease. Experience secure, streamlined, and efficient bill payments all in one place.
-                </p>
-                <div className='flex justify-center gap-4'>
-                  <a href="https://www.facebook.com/mahmudul.islam.sohan.2025/"><Facebook size={32} color="white" fill='white' /></a>
-                  <a href="https://www.linkedin.com/in/mahmudul-islam-sohan/"><Linkedin size={32} color="white" fill='white' /></a>
-                  <a href=""><Twitter size={32} color="white" fill='white' /></a>
-                </div>
+      <div>
+        <div
+          className="hero h-[500px] mb-10"
+          style={{
+            backgroundImage:
+              `url(${bannerCover})`,
+          }}
+        >
+          <div className="hero-overlay"></div>
+          <div className="hero-content text-neutral-content text-center">
+            <div className="max-w-md">
+              <h1 className="mb-5 text-4xl text-white font-bold">Welcome to UtiPay BD</h1>
+              <p className="mb-5 text-white">
+                A trusted platform for managing and paying your essential utility bills with ease. Experience secure, streamlined, and efficient bill payments all in one place.
+              </p>
+              <div className='flex justify-center gap-4'>
+                <a href="https://www.facebook.com/mahmudul.islam.sohan.2025/"><Facebook size={32} color="white" fill='white' /></a>
+                <a href="https://www.linkedin.com/in/mahmudul-islam-sohan/"><Linkedin size={32} color="white" fill='white' /></a>
+                <a href=""><Twitter size={32} color="white" fill='white' /></a>
               </div>
             </div>
           </div>
         </div>
+      </div>
+      <div className='max-w-screen-xl mx-auto'>
+
         <Swiper
           spaceBetween={30}
           centeredSlides={true}

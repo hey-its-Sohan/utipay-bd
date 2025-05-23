@@ -40,8 +40,8 @@ const BillDetails = () => {
     )
   }
   return (
-    <div className='bg-base-200'>
-      <div className='max-w-screen-xl mx-auto py-16'>
+    <div className='bg-base-200 md:py-24 md:px-5 lg:px-0 lg:py-0'>
+      <div className='max-w-screen-xl mx-auto py-16 '>
         <div className="card lg:card-side bg-white p-4 shadow-sm mb-4 ">
           <figure className='w-[270px]'>
             <img
