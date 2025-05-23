@@ -42,7 +42,7 @@ const Banner = () => {
                 </p>
                 <div className='flex justify-center gap-4'>
                   <a href="https://www.facebook.com/mahmudul.islam.sohan.2025/"><Facebook size={32} color="white" fill='white' /></a>
-                  <a href=""><Linkedin size={32} color="white" fill='white' /></a>
+                  <a href="https://www.linkedin.com/in/mahmudul-islam-sohan/"><Linkedin size={32} color="white" fill='white' /></a>
                   <a href=""><Twitter size={32} color="white" fill='white' /></a>
                 </div>
               </div>
