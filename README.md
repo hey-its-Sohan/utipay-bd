@@ -1,12 +1,46 @@
-# React + Vite
+# 💡 UtiPay BD – Smart Utility Bill Management Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+UtiPay BD is a modern web application that allows users in Bangladesh to conveniently view, manage, and pay their utility bills online — all in one secure platform. From electricity to internet, users can track their balances and pay with ease.
 
-Currently, two official plugins are available:
+## 🌐 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+👉 [Visit UtiPay BD Live](https://utipay-bd.netlify.app/)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🎯 Project Purpose
+
+The goal of UtiPay BD is to simplify utility bill payments by offering:
+
+- A centralized platform for all bill types
+- Real-time payment tracking
+- Secure profile and balance management
+- A responsive, user-friendly UI built with modern tools
+
+---
+
+## 🔑 Key Features
+
+- 🔐 **User Authentication** with Firebase
+- 👤 **Profile Management** with photo and name update
+- 💳 **Balance Tracking** and auto-deduction after payment
+- 🧾 **Utility Bill Grid** with types, due dates, and amounts
+- ✅ **Paid Bill Tracking** stored in localStorage
+- 🎨 **Fuchsia-themed UI** with TailwindCSS and DaisyUI
+- 📱 **Responsive Design** for desktop and mobile
+- 🖼️ **Banner Carousel** for partner logos and announcements
+
+---
+
+## 📦 Tech Stack & NPM Packages
+
+| Package / Tool     | Purpose                               |
+| ------------------ | ------------------------------------- |
+| `react`            | Core UI Framework                     |
+| `react-router-dom` | Routing and navigation                |
+| `firebase`         | Authentication and user management    |
+| `lucide-react`     | Icons for categories and UI elements  |
+| `react-toastify`   | Toast notifications                   |
+| `swiper`           | Carousel/slider for logos and banners |
+| `tailwindcss`      | Utility-first CSS framework           |
+| `daisyui`          | Component library for TailwindCSS     |
